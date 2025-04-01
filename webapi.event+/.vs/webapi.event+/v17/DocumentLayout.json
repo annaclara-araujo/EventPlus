@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\43676443837\\Desktop\\webapi.event\u002B\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\43676443837\\Desktop\\webapi.event\u002B\\webapi.event\u002B\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5A1C5DB5-04B8-4621-9D12-F0C05B25DDE5}|webapi.event\u002B.csproj|c:\\users\\43676443837\\desktop\\webapi.event\u002B\\webapi.event\u002B\\interfaces\\icomentarioseventosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A1C5DB5-04B8-4621-9D12-F0C05B25DDE5}|webapi.event\u002B.csproj|solutionrelative:interfaces\\icomentarioseventosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IComentariosEventosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\43676443837\\Desktop\\webapi.event\u002B\\webapi.event\u002B\\Interfaces\\IComentariosEventosRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IComentariosEventosRepository.cs",
+              "ToolTip": "C:\\Users\\43676443837\\Desktop\\webapi.event\u002B\\webapi.event\u002B\\Interfaces\\IComentariosEventosRepository.cs",
+              "RelativeToolTip": "Interfaces\\IComentariosEventosRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T19:44:02.799Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
