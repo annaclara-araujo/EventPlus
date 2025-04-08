@@ -1,3 +1,5 @@
+using Azure;
+using Azure.AI.ContentSafety;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -7,6 +9,20 @@ using webapi.event_.Interfaces;
 using webapi.event_.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// configuração do Azure Content safety
+
+var endpoint = builder.Configuration["\"AzureContentSafety:Endpoint"];
+var apiKey = builder.Configuration["AzureContentSafety:ApiKey"];
+
+if (string.IsNullOrEmpty(apiKey) || string.IsNullOrEmpty(endpoint))
+{
+    throw new InvalidOperationException("Azure Content Safety: Endpoint ou API Key não foram configurados");
+}
+
+var client = new ContentSafetyClient (new Uri(endpoint), new AzureKeyCredential(apiKey));
+builder.Services.AddSingleton(client);
+
 
 builder.Services // Acessa a coleção de serviços da aplicação (Dependency Injection)
     .AddControllers() // Adiciona suporte a controladores na API (MVC ou Web API)
@@ -29,6 +45,8 @@ builder.Services.AddScoped<ITiposEventosRepository, TiposEventosRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuariosRepository>();
 builder.Services.AddScoped<IEventosRepository, EventosRepository>();
 builder.Services.AddScoped<IPresencasEventosRepository, PresencasEventosRepository>();
+builder.Services.AddScoped<IComentariosEventosRepository, ComentariosEventosRepository>();
+
 
 //Adiciona o serviço de Controllers
 builder.Services.AddControllers();

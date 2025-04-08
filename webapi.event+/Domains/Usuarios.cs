@@ -26,7 +26,7 @@ namespace webapi.event_.Domains
         [StringLength(60, MinimumLength = 5, ErrorMessage = "A senha deve conter entre 5 e 30 caracteres.")]
         public string? Senha { get; set; }
 
-        //referência para a entidade TiposUsuarios
+        //referência para a 
         [Required(ErrorMessage = "O tipo do usuário é obrigatório!")]
         public Guid IdTipoUsuario { get; set; }
 
